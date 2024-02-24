@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.wallpaperflare.com/static/755/416/975/wen-jr-fantasy-art-army-battlefields-wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-band {
+            background-color: rgba(173, 216, 230, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60%;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .container {
+            padding: 40px;
+            text-align: center;
+            color: black;
+        }
+
+        .story-text {
+            font-size: 18px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .option-button {
+            padding: 12px 20px;
+            background-color: #34495e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif;
+            font-size: 16px;
+            text-decoration: none; 
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-band">
+        <div class="container translucent-box">
+            <h1>Part 3: The Beginning</h1>
+
+            <p class="story-text">
+                You stand at Castle Black, the Lord Commander of the Night's Watch, with the looming threat of the White Walkers drawing near. Your responsibility is clear - to protect the realm. The icy winds of winter howl through the ancient castle as you look out at the vast, desolate wilderness beyond the Wall. The Night's Watch is severely undermanned, and supplies are dwindling. Your brothers look to you for leadership, and Westeros watches with bated breath.
+            </p>
+            <p class="story-text">
+                As you contemplate your next move, the gravity of the situation weighs heavily on your shoulders. The White Walkers are no mere legend; they are real, and they are coming. Your decision will determine the fate of not only the Night's Watch but the entire realm of Westeros.
+            </p>
+            <a href="{%url 'page4'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+    
+    </html>

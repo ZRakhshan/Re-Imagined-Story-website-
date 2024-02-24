@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://4kwallpapers.com/images/wallpapers/battle-of-the-black-2560x1440-11942.png');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-ban {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .container {
+            text-align: center;
+            color: black;
+            font-family: 'Papyrus', sans-serif;
+        }
+
+        .story-text {
+            font-size: 18px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .option-button {
+            padding: 12px 20px;
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #A52A2A;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-ban">
+        <div class="container translucenta">
+            <p class="story-text">
+                The battle begins, and the clash between the living and the dead is fierce. The Wall's formidable defenses prove to be a powerful obstacle for the White Walkers, forcing them to confront not just a physical barrier but also the unbroken spirit of those who stand to defend it. The realm watches with bated breath as reports of the battle reach every corner of Westeros. The fate of the Wall, Castle Black, and the entire realm teeters on a knife's edge.
+            </p>
+            <a href="{%url 'page8'%}" class="option-button">Continue</a>
+        </div>
+    </div>
+</body>
+
+</html>

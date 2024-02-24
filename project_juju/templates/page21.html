@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallpaperaccess.com/full/144682.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bend {
+            background-color: rgba(169, 169, 169, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bend h1,
+        .white-bend p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2f4f4f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-bend">
+        <div class="white bb">
+            <h1>Story continues...</h1>
+            <p>
+                Will you be able to use the intelligence gathered to defend the realm and the Wall? What will be your choice?
+            </p>
+            <p>
+                1. Prepare a Trap: Use the information from the scouts to set up a strategic trap for the White Walkers.
+                2. Request Aid from the South: Send emissaries to the southern kingdoms to request reinforcements.
+                3. Strengthen Magical Defenses: Seek out the wisdom of the Children of the Forest or the Red Priests to bolster your magical defenses against the White Walkers.
+            </p>
+            <p>
+                <button class="option-button" onclick="selectCh('Prepare trap')">Prepare trap</button>
+                <button class="option-button" onclick="selectCh('Request aid')">Request aid</button>
+                <button class="option-button" onclick="selectCh('Strengthen Magical Defenses')">Strengthen Magical Defenses</button>
+            </p>
+        </div>
+    </div>
+    <script>
+        function selectCh(ch) {
+           if(ch==='Prepare trap'){
+            window.location.href="{%url 'page22'%}";
+           }
+           else if(ch==='Request aid'){
+                window.location.href = "{%url 'page23'%}";
+           }
+           else {
+                window.location.href = "{%url 'page24'%}";
+           }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images2.alphacoders.com/107/thumb-1920-1079388.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bend {
+            background-color: rgba(173, 216, 230, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bend h1,
+        .white-bend p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1e272e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #36454f;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-bend">
+        <div class="white bb">
+            <p>In your quest to bolster your defenses, you seek out the wisdom of the Children of the Forest or the Red Priests. Their guidance leads to the enhancement of the Wall's magical protections. The mystical barriers prove highly effective against the White Walkers.
+                The battle unfolds with a sense of supernatural awe, as the Wall's magic repels the White Walkers. The realm watches in amazement as the Wall's enchantments hold strong against the icy menace. Your decision to strengthen magical defenses becomes a source of inspiration and wonder, as Westeros stands united against the impending threat.
+            </p>                
+            <a href="{%url 'page25'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+</html>

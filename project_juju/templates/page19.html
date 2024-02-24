@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.pinimg.com/originals/b9/49/76/b94976900a5e72656136686efe810568.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bnd {
+            background-color: rgba(173, 216, 230, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bnd h1,
+        .white-bnd p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #36454f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-bnd">
+        <div class="white bb">
+            <p>
+                As the scouts press on, they come across signs of the White Walkers' presence - strange patterns in the snow, eerie blue-tinged foliage, and the occasional corpse reanimated as a wight. They also discover clues about the White Walkers' plans, which involve a massive assault on the Wall.
+                Meanwhile, back at Castle Black, the atmosphere is tense. The recruits and remaining Night's Watch members nervously await the rangers' return. Your leadership is under scrutiny, and the success of this mission may influence the fate of the Wall and the realm.
+            </p>
+                
+            <a href="{%url 'page20'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images8.alphacoders.com/129/1292062.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+        }
+
+        .white-b {
+            background-color: rgba(173, 216, 230, 0.5); 
+            padding: 40px; 
+            border-radius: 10px;
+            text-align: center;
+            width: 80%; 
+            max-width: 800px; 
+        }
+
+        .story-text {
+            font-size: 24px; 
+            color: black; 
+            max-width: 100%; 
+            overflow: hidden;
+            font-family: 'Papyrus', sans-serif; 
+        }
+
+        .option-button {
+            padding: 12px 20px; 
+            background-color: #1E1E1E; 
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif; 
+            font-size: 18px; 
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #141414; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-b">
+        <div class="container translucent">
+            <p class="story-text">
+                Unnerving approach of the White Walkers and their relentless army of wights. The time has come, and the battle is imminent. Your recruits, men who had braved the journey to Castle Black, now stand shoulder to shoulder with seasoned members of the Night's Watch. Their determination is unyielding, their belief in the cause unwavering. In the midst of adversity, the spirit of the Night's Watch shines bright.
+            </p>
+            <a href="{%url 'page6'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+    
+    </html>

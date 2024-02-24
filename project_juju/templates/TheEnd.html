@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images4.alphacoders.com/133/thumb-1920-1338666.png');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .end-container {
+            background-color: rgba(173, 216, 230, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .end-container h1 {
+            color: black;
+            font-size: 70px;
+        }
+
+        .leave-button {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #1e272e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Papyrus', sans-serif;
+            transition: background-color 0.3s ease-in-out;
+            display: inline-block; 
+        }
+
+        .leave-button:hover {
+            background-color: #36454f;
+        }
+    </style>
+</head>
+<body>
+    <div class="end-container">
+        <h1>The End</h1>
+        <a href="{%url 'home'%}" class="leave-button">Leave</a>
+    </div>
+</body>
+</html>

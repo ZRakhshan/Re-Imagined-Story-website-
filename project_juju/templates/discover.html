@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Papyrus', sans-serif;
+            background: url("https://www.hdwallpapers.in/download/anime_boy_and_girl_light_reflection_starry_sky_4k_hd_anime-HD.jpg") center/cover no-repeat fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .header {
+            background: rgba(56, 54, 100, 0.5);
+            color: #B77979;
+            text-align: center;
+            padding: 40px;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            box-sizing: border-box;
+            flex-wrap: wrap; 
+        }
+
+        .genre-box {
+            width: calc(40% - 20px); 
+            margin: 10px;
+            padding: 10px;
+            background: rgba(56, 54, 100, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+            cursor: pointer;
+            overflow: hidden; 
+        }
+
+        .genre-box:hover {
+            background: rgba(92, 90, 145, 0.9);
+        }
+
+        .genre-box img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 5px; 
+        }
+
+        .genre-box h2 {
+            margin-bottom: 5px;
+            font-size: 1.2em; 
+            font-weight: bold; 
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Papyrus">
+</head>
+
+<body>
+    {% load static%}
+
+    <div class="header">Discover Genres</div>
+
+    <div class="content">
+        <div class="genre-box">
+            <img src="https://4kwallpapers.com/images/wallpapers/lone-tree-crescent-moon-half-moon-starry-sky-night-lake-3440x1440-7701.jpg" alt="Fantasy Genre Image">
+            <h2>Fantasy</h2>
+        </div>
+
+        <div class="genre-box">
+            <img src="https://img.freepik.com/premium-photo/animestyle-villain-with-glowing-aura-dramatic-images-wideangle-lens_461200-1021.jpg" alt="Drama Genre Image">
+            <h2>Drama</h2>
+        </div>
+
+        <div class="genre-box">
+            <img src="https://wallpapers.com/images/featured/scary-anime-boy-pictures-2rxww82dceed62u1.jpg" alt="Horror Genre Image">
+            <h2>Horror</h2>
+        </div>
+
+        <div class="genre-box">
+            <img src="https://images6.alphacoders.com/118/1184847.jpg" alt="Romance Genre Image">
+            <h2>Romance</h2>
+        </div>
+
+        <div class="genre-box">
+            <img src="https://wallpapers.com/images/hd/funny-anime-faces-of-luffy-friends-xwscxl0kn7ehokuh.jpg" alt="Humor Genre Image">
+            <h2>Humor</h2>
+        </div>
+
+        <div class="genre-box">
+            <img src="https://c4.wallpaperflare.com/wallpaper/983/422/352/fantasy-art-sunset-digital-art-magic-wallpaper-preview.jpg" alt="Mystical Genre Image">
+            <h2>Mystical</h2>
+        </div>
+
+        <div class="genre-box">
+            <img src="https://www.hdwallpapers.in/download/anime_village_4k_5k_attack_on_titan-HD.jpg" alt="Historical Genre Image">
+            <h2>Historical</h2>
+        </div>
+
+        <div class="genre-box">
+            <img src="https://images.alphacoders.com/133/1339106.png" alt="Non-Fiction Genre Image">
+            <h2>Non-Fiction</h2>
+        </div>
+    </div>
+
+</body>
+
+</html>

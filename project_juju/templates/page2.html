@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://w.forfun.com/fetch/f8/f8d2a6d42b418682c13e4ca531713c18.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(139, 69, 19, 0.7); 
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            max-width: 700px; 
+        }
+
+        .story-text {
+            font-size: 20px;
+            text-align: center;
+            color: white; 
+        }
+
+        .choose-text {
+            font-size: 28px; 
+            color: white; 
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between; 
+            gap: 10px; 
+            margin-top: 20px;
+        }
+
+        .option-button {
+            flex: 1; 
+            padding: 15px 0; 
+            background-color: #5A2C0D; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif;
+            font-size: 16px; 
+            transition: background-color 0.3s ease-in-out;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .option-button:hover {
+            background-color: #73462B; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container translucent-box">
+        <h1 class="choose-text">Choose Your Character</h1>
+        <p class="story-text">
+            Choose your character:
+            Choice 1: Eddard "Ned" Stark
+            • Play as the honorable Lord of Winterfell and navigate the complex political landscape of Westeros.
+        </p>
+        <p class="story-text">
+            Choice 2: Tyrion Lannister
+            • Step into the shoes of Tyrion Lannister, the witty and cunning member of House Lannister, and outmaneuver your rivals.
+        </p>
+        <div class="options">
+            <button class="option-button" onclick="selectCharacter('Eddard Stark')">Eddard Stark</button>
+            <button class="option-button" onclick="selectCharacter('Tyrion Lannister')">Tyrion Lannister</button>
+        </div>
+    </div>
+
+    <script>
+        function selectCharacter(character) {
+            window.location.href = "{%url 'page3'%}";
+        }
+    </script>
+</body>
+
+</html>

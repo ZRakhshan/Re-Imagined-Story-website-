@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {%load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images5.alphacoders.com/133/1339874.png');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .author-container {
+            background-color: rgba(173, 216, 230, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: black;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .authors-section {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .published-authors,
+        .upcoming-authors {
+            width: 48%;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-weight: bold; 
+            color: black; 
+        }
+
+        .author-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .author-button:hover {
+            background-color: #4834d4;
+        }
+    </style>
+</head>
+<body>
+    <div class="author-container">
+        <h1>Authors</h1>
+
+        <div class="authors-section">
+            <div class="published-authors">
+                <h2>Published Authors</h2>
+                <ul>
+                    <li><strong>Ahra Zi</strong></li>
+                    <li><strong>Jinal Mekat</strong></li>
+                    <li><strong>Meow Nite</strong></li>
+                    <li><strong>Nuchka</strong></li>
+                    <li><strong>Sushi</strong></li>
+                </ul>
+            </div>
+
+            <div class="upcoming-authors">
+                <h2>Upcoming Authors</h2>
+                <ul>
+                    <li><strong>Alzaza</strong></li>
+                    <li><strong>Pancake</strong></li>
+                    <li><strong>Anii</strong></li>
+                    <li><strong>Rizz Rizz</strong></li>
+                    <li><strong>Ramt</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="{% url 'home' %}" class="author-button">Home</a>
+    </div>
+</body>
+</html>

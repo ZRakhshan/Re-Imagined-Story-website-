@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.wallpapersafari.com/0/20/fE5T0V.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+        }
+
+        .white-bandedd {
+            background-color: rgba(255, 255, 240, 0.8); 
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%; 
+        }
+
+        .white-bandedd h1,
+        .white-bandedd p,
+        .option-button {
+            font-family: Papyrus, sans-serif; 
+        }
+
+        .option-button {
+            padding: 10px 20px;
+            background-color: #8B4513; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .option-button:hover {
+            background-color: #A0522D; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-bandedd">
+        <div class="white bb">
+            <p>
+                Recognizing the overwhelming nature of the White Walkers' threat, you choose to send emissaries to the southern
+                kingdoms for urgent reinforcements. Word spreads about the impending doom, and aid arrives from the southern
+                kingdoms just in time. Your forces, united with the armies of the southern kingdoms, form a formidable coalition.
+            </p>
+            <a href="{%url 'page13'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+    
+    </html>

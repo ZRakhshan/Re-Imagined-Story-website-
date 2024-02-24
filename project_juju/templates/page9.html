@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images3.alphacoders.com/162/162709.jpg'); 
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+        }
+
+        .white-bandednesss {
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 40px; 
+            border-radius: 10px;
+            text-align: center;
+            width: 80%; 
+            max-width: 800px; 
+        }
+
+        .white {
+            font-family: 'Papyrus', sans-serif; 
+            font-size: 18px; 
+            color: black; 
+        }
+
+        .option-button {
+            padding: 12px 20px;
+            background-color: #8B4513; 
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif; 
+            font-size: 18px; 
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #A52A2A; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-bandednesss">
+        <div class="white bb">
+            <p>
+                You choose to take advantage of the Wall's defenses and launch a daring counteroffensive against the White Walkers. The Night's Watch, bolstered by their determination and the strength of the Wall, advances beyond its fortifications, engaging the White Walkers head-on. The battle rages on, and the clash is fierce. Your strategy catches the White Walkers by surprise, but the battle remains perilous. Your forces fight valiantly, and the Wall's defenses remain formidable.
+            </p>
+            <a href="{%url 'page12'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+    
+    </html>

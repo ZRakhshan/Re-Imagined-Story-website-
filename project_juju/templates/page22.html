@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://steamuserimages-a.akamaihd.net/ugc/958590148155740289/3E52C9D0EB2DBFD39E0F6C3EC63A8E7E12A48E99/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        .white-bend {
+            background-color: rgba(255, 228, 196, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bend h1,
+        .white-bend p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #654321;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-bend">
+        <div class="white bb">
+            <p>You decide to use the information from the scouts to set up a strategic trap for the White Walkers. With their numbers and tactics in mind, you orchestrate an elaborate plan to lure the White Walkers into a situation that plays to your advantage. The trap is carefully executed, catching the White Walkers off guard and allowing your forces to strike with precision.
+                As the battle unfolds, the White Walkers find themselves ensnared in a cunning strategy. The element of surprise and a well-executed plan give you a critical advantage, turning the tide of the battle in your favor. The realm watches in awe as your tactics take a toll on the White Walkers, and hope is rekindled.    </p>
+                <a href="{%url 'page25'%}" class="option-button">Continue</a>
+            </div>
+        </body>
+        
+        </html>

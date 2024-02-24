@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/622/237/95/fantasy-warrior-man-monk-oriental-hd-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-band {
+            background-color: rgba(173, 216, 230, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60%;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .container {
+            padding: 40px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .story-text {
+            font-size: 18px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .option-button {
+            padding: 12px 20px;
+            background-color: #36454f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-band">
+        <div class="container translucent-box">
+            <p class="story-text">
+                You decide to establish contact with the Free Folk, also known as the Wildlings, to seek additional support. Your diplomacy and conviction convince them of the impending threat, and they join your cause. The Free Folk, with their knowledge of the lands beyond the Wall and their fierce warriors, add strength to your ranks.
+            </p>
+            <a href="{%url 'page14'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+    
+    </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallpapermemory.com/uploads/427/epic-background-hd-1680x1050-327829.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bandedness {
+            background-color: rgba(173, 216, 230, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bandedness h1,
+        .story-text,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .story-text {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #36454f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-bandedness">
+        <div class="container translucent-boxa">
+            <h1>Part 5: Make your decision</h1>
+            <p>Choose to:</p>
+            <p>
+                1. Strategize Offensive Moves: Develop a plan to push the White Walkers back beyond the Wall.</p>
+            <p>2. Organize Refugee Evacuation: Ensure the safety of nearby settlements and refugees.</p>
+            <p>3. Secure Essential Supplies: Confirm that your resources include ample provisions to sustain your troops and the defense of the Wall.</p>
+            </p>
+            <button class="option-button" onclick="selectCh('Strategize Offensive Moves')">Strategize Offensive Moves</button>
+            <button class="option-button" onclick="selectCh('Organize Refugee Evacuation')">Organize Refugee Evacuation</button>
+            <button class="option-button" onclick="selectCh('Secure Essential Supplies')">Secure Essential Supplies</button>
+        </div>
+    </div>
+
+    <script>
+        function selectCh(ch) {
+            if (ch === 'Strategize Offensive Moves') {
+                window.location.href = "{%url 'page16'%}";
+            } else if (ch === 'Organize Refugee Evacuation') {
+                window.location.href = "{%url 'page16'%}";
+            } else {
+                window.location.href = "{%url 'page16'%}";
+            }
+        }
+    </script>
+</body>
+</html>

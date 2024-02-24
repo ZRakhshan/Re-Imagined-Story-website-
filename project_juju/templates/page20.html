@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images2.alphacoders.com/941/941926.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bend {
+            background-color: rgba(173, 216, 230, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bend h1,
+        .white-bend p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #36454f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-bend">
+        <div class="white bb">
+            <h1>Story continues...</h1>
+            <p>
+                The rangers return, battered and bruised, but with critical information that could be the key to defending the Wall. You learn of the White Walkers' numbers, their tactics, and the location of their primary assault. Armed with this knowledge, you prepare your defenses and rally your troops.
+                The fate of Westeros now hinges on your strategic decisions as you face the impending battle with the White Walkers.
+            </p>
+            
+            <a href="{%url 'page21'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+</html>

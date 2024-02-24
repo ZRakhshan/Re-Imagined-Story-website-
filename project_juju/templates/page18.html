@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://rare-gallery.com/mocahbig/475860-men-drawing-warrior-helmet-armor-knight-horse.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bnds {
+            background-color: rgba(173, 216, 230, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bnds h1,
+        .white-bnds p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #36454f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-bnds">
+        <div class="white bb">
+            <h1>Story continues...</h1>
+            <p>
+                You opt to send skilled rangers beyond the Wall to gather critical intelligence on the White Walkers. Your choice for this perilous mission is not taken lightly. A group of seasoned rangers, led by an experienced tracker, prepares to venture into the frozen unknown. They are equipped with dragonglass weapons, warm fur cloaks, and provisions for the journey. As they disappear into the icy wilderness, you hope that their skills and determination will uncover valuable information to help in the coming battle.
+            </p>
+                
+            <a href="{%url 'page19'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+</html>

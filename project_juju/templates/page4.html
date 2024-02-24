@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.wallpapersafari.com/93/22/CGXHy1.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+        }
+
+        .white-band {
+            background-color: rgba(245, 245, 220, 0.8); 
+            padding: 40px; 
+            border-radius: 10px;
+            text-align: center;
+            width: 80%; 
+            max-width: 800px; 
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1, p, .option-button {
+            font-family: 'Papyrus', sans-serif; 
+        }
+
+        h1 {
+            font-size: 32px; 
+            color: black; 
+            margin-bottom: 20px; 
+        }
+
+        .story-text {
+            font-size: 24px; 
+            color: black; 
+            max-width: 100%; 
+            overflow: hidden; 
+        }
+
+        .option-button {
+            padding: 12px 20px; 
+            background-color: #8B735B; 
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px; 
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #725B4B; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-band">
+        <div class="container translucent-box">
+            <h1>Part 4: Make your decision</h1>
+            <p>Choose to:</p>
+            <p>
+                1: Strengthen the Wall - Prioritize fortifying the Wall and recruiting more men to bolster your defenses.</p>
+            <p>
+                2: Seek Alliances - Send emissaries to the Stark family and other noble houses to unite the North and other regions against the White Walkers. Send scouts to gather intelligence on the White Walkers' movements and plans.
+            </p>
+            <button class="option-button" onclick="selectC('Strengthen the Wall')">Strengthen the Wall</button>
+            <button class="option-button" onclick="selectC('Seek Alliances')">Seek Alliances</button>
+        </div>
+    </div>
+
+    <script>
+        function selectC(c) {
+            localStorage.setItem('selectC', c);
+            window.location.href = "{%url 'page5'%}" ;
+        }
+    </script>
+</body>
+</html>

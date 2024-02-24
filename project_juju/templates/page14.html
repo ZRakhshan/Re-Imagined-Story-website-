@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images5.alphacoders.com/372/372750.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bands {
+            background-color: rgba(173, 216, 230, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bands p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #36454f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-bands">
+        <div class="white bb">
+            <p>
+                With the Free Folk as your allies, your forces are bolstered. The Wildlings, now united with the Night's Watch, stand ready to defend the Wall and the realm from the White Walkers.
+                The fate of Westeros now hinges on the choices you've made, and the realm stands united against the impending White Walker threat. The battle is fierce, but the living are determined to protect the realms of men.
+            </p>
+            
+            <a href="{%url 'page15'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/premium-photo/medieval-battle-scene-with-cavalry-infantry-sunset_1047180-9.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-ba {
+            background-color: rgba(222, 184, 135, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .container {
+            text-align: center;
+            color: black;
+            font-family: 'Papyrus', sans-serif;
+        }
+
+        .story-text {
+            font-size: 24px;
+            font-weight: bold;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .option-button {
+            padding: 12px 20px;
+            background-color: #B8860B;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #8B4513;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-ba">
+        <div class="container translucenta">
+            <p class="story-text">
+                As the first light of dawn breaks over the horizon, you address your fellow defenders, a mix of experienced brothers and the newly initiated. Your words resonate through the frigid air, instilling a sense of purpose and camaraderie. The men raise their swords, and the chant of the Night's Watch oath echoes across the Wall, a stark reminder of their duty to protect the realm.
+            </p>
+            <a href="{%url 'page7'%}" class="option-button">Continue</a>
+        </div>
+    </div>
+</body>
+
+</html>

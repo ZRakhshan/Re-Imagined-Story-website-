@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Papyrus', sans-serif;
+            background: url("{%static 'images/home.jpg' %}") center/cover no-repeat fixed;
+            background-size: cover;
+        }
+
+        .header {
+            background: rgba(56, 54, 100, 0.5);
+            color: #B77979;
+            text-align: center;
+            padding: 40px;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .navigation {
+            background: #0a1720;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navigation a:hover {
+            color: #B77979;
+            text-decoration: underline;
+        }
+
+        .search-bar-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-left: 10px;
+            width: 300px;
+            font-family: 'Papyrus', sans-serif;
+            background: rgba(56, 54, 100, 0.7);
+            color: white;
+            font-weight: bold;
+        }
+
+        .welcome-gif {
+            width: 50px; 
+            height: auto;
+            margin-left: 10px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .available-stories {
+            background: #0a1720;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .story-box {
+            width: 70%;
+            background: rgba(56, 54, 100, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .story-box:hover {
+            background: rgba(92, 90, 145, 0.9);
+        }
+
+        .confirmation-dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #5c5a91; 
+            padding: 40px; 
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            width: 400px; 
+            height: 200px; 
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center; 
+        }
+
+        .confirmation-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .confirmation-buttons button {
+            padding: 15px; 
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em; 
+            font-family: 'Papyrus', sans-serif; 
+            font-weight: bold;
+        }
+
+        .confirmation-buttons button.yes {
+            background: #B77979;
+            color: white;
+        }
+
+        .confirmation-buttons button.no {
+            background: #0a1720;
+            color: white;
+        }
+
+        .confirmation-dialog p {
+            color: white;
+            font-size: 1.5em; 
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Papyrus">
+</head>
+
+<body bgcolor="#303030">
+    {% load static%}
+    <div class="header">Re-Imagined</div>
+
+    <div class="navigation">
+        <a href="{%url 'discover'%}">Discover</a>
+        <a href="{%url 'recommendation'%}">Recommendations</a>
+        <a href="{%url 'authors'%}">Authors</a>
+        <a href="#" onclick="showConfirmationDialog()">Logout</a>
+        
+        <div class="search-bar-container">
+            <input type="text" class="search-bar" placeholder="Explore">
+            <img src="{%static 'images/kitty1.gif' %}" alt="Welcome Gif" class="welcome-gif">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="available-stories">Available Stories</div>
+
+        <div class="story-box" onclick="redirectToThronesOfShadows()">
+            <h2>Thrones of Shadows</h2>
+            <p><strong>Author:</strong> Jinal Mekat</p>
+            <p><strong>Description:</strong> Intrigue, betrayal, and battles for the Iron Throne in a world of shadows...</p>
+        </div>
+
+        <div class="story-box" onclick="redirectToCursedDreams()">
+            <h2>Cursed Dreams: Despair falls</h2>
+            <p><strong>Author:</strong> Ahra Zi</p>
+            <p><strong>Description:</strong> Nightmares come true, face your past, unfold the truth and rewrite your fate...</p>
+        </div>
+    </div>
+
+    <div class="confirmation-dialog" id="confirmationDialog">
+        <p>Leaving so soon?</p>
+        <div class="confirmation-buttons">
+            <button class="yes" onclick="confirmLogout()">Yes</button>
+            <button class="no" onclick="cancelLogout()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToRegistration() {
+            showConfirmationDialog();
+        }
+
+        function redirectToThronesOfShadows() {
+            window.location.href = "{%url 'thrones'%}";  
+        }
+
+        function redirectToCursedDreams() {
+            window.location.href = "{%url 'cursed'%}";
+        }
+
+        function showConfirmationDialog() {
+            var confirmationDialog = document.getElementById('confirmationDialog');
+            confirmationDialog.style.display = 'block';
+        }
+
+        function confirmLogout() {
+            window.location.href = "{% url 'login' %}";
+        }
+
+        function cancelLogout() {
+            var confirmationDialog = document.getElementById('confirmationDialog');
+            confirmationDialog.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

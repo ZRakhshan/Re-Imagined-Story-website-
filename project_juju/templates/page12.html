@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallpaper.dog/large/5510581.png');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white {
+            background-color: rgba(173, 216, 230, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white h1,
+        .white p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #36454f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white">
+        <h1>Story continues...</h1>
+        <p>
+            As the realm watches, the battle unfolds with great anticipation. The determination and bravery of the Night's Watch become an inspiring tale throughout Westeros. The clash between the living and the dead is an epic spectacle, and the outcome is uncertain.
+        </p>
+        <a href="{%url 'page15'%}" class="option-button">Continue</a>
+    </div>
+</body>
+
+</html>

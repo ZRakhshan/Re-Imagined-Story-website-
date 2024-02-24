@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://png.pngtree.com/background/20230401/original/pngtree-castle-game-scene-mysterious-fantasy-background-picture-image_2251025.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bend {
+            background-color: rgba(173, 216, 230, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bend h1,
+        .white-bend p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1e272e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #36454f;
+        }
+    </style>
+</head>
+<body>
+    <div class="white-bend">
+        <div class="white bb">
+            <h1>Story continues...</h1>
+            <p>Recognizing the overwhelming nature of the White Walkers' threat, you decide to send emissaries to the southern kingdoms, urgently requesting reinforcements. Word spreads across the realm about the impending doom, and, in response, aid arrives just in time.
+                Reinforcements from the southern kingdoms bolster your defenses with fresh troops and additional resources. The combined forces of the North and the southern kingdoms prove to be more than a match for the White Walkers. The realm breathes a collective sigh of relief as the tide of battle shifts in your favor.
+            </p>                
+            <a href="{%url 'page25'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+    
+</html>

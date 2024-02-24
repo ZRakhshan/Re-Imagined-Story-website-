@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.alphacoders.com/766/766536.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+        }
+
+        .white-bandedness {
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%; 
+            max-width: 800px; 
+        }
+
+        .container {
+            text-align: center;
+            color: black; 
+            font-family: 'Papyrus', sans-serif; 
+        }
+
+        .story-text {
+            font-size: 18px; 
+            max-width: 100%; 
+            overflow: hidden; 
+        }
+
+        .option-button {
+            padding: 12px 20px; 
+            background-color: #8B4513; 
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Papyrus', sans-serif; 
+            font-size: 18px; 
+            transition: background-color 0.3s ease-in-out;
+            margin: 5px; 
+        }
+
+        .option-button:hover {
+            background-color: #A52A2A; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-bandedness">
+        <div class="container translucent-boxa">
+            <h1>Part 4: Make your decision</h1>
+            <p>Choose to:</p>
+            <p>
+                1. Coordinate a Counterattack: Take advantage of the Wall's defenses to launch a daring counteroffensive against the White Walkers.</p>
+              <p>  2. Appeal for Reinforcements: Send emissaries to the southern kingdoms for urgent reinforcements.</p>
+               <p> 3. Seek Aid from Beyond the Wall: Establish contact with the Free Folk for additional support, despite the challenges of past tensions.
+            </p>
+            <button class="option-button" onclick="selectCh('Coordinate a Counterattack')">Coordinate a Counterattack</button>
+            <button class="option-button" onclick="selectCh('Appeal for Reinforcements')">Appeal for Reinforcements</button>
+            <button class="option-button" onclick="selectCh('Seek Aid from Beyond the Wall')">Seek Aid from Beyond the Wall</button>
+        </div>
+    </div>
+
+    <script>
+        function selectCh(ch) {
+           if(ch==='Coordinate a Counterattack'){
+            window.location.href="{%url 'page9'%}";
+           }
+           else if(ch==='Appeal for Reinforcements'){
+                window.location.href = "{%url 'page10'%}";
+           }
+           else {
+                window.location.href = "{%url 'page11'%}";
+           }
+        }
+    </script>
+</body>
+
+</html>

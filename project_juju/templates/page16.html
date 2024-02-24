@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static%}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallpapercave.com/wp/wLMacYz.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Papyrus', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .white-bands {
+            background-color: rgba(173, 216, 230, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            max-height: 80%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-bands h1,
+        .white-bands p,
+        .option-button {
+            font-family: 'Papyrus', sans-serif;
+            color: black;
+        }
+
+        .option-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #36454f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .option-button:hover {
+            background-color: #1e272e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="white-bands">
+        <div class="white bb">
+            <h1>Story continues...</h1>
+            <p>
+                You decide that the strength of the Night's Watch alone won't be enough to face the impending threat of the White Walkers. You dispatch trusted emissaries to the Stark family and other noble houses, carrying your message of unity against the common enemy.
+            </p>
+            <p>
+                You reach out to House Targaryen for their powerful dragons and resources. Daenerys Targaryen heeds your plea and arrives with her dragons and armies. Her formidable forces provide a significant advantage in the battle against the White Walkers.
+            </p>
+            <p>
+                The dragons, with their dragonfire, become a decisive factor in holding back the White Walkers. The realm watches in awe as Daenerys's dragons breathe fire upon the icy foes, turning the tide of the battle.
+            </p>
+            <p>
+                With the Free Folk by your side, your forces are bolstered, and the Wildlings, now allies, stand ready to defend the Wall and the realm from the White Walkers.
+            </p>
+            <p>
+                As the battle with the White Walkers looms, the realm's future depends on the alliances you've forged and the strength of your united front.
+            </p>
+            <a href="{%url 'page18'%}" class="option-button">Continue</a>
+        </div>
+    </body>
+</html>
